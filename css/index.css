@@ -114,98 +114,8 @@ header {
 
 
 
-/*slider*/
-#background {
-    max-width: 100%;
-    height: auto;
-}
 
-#slider {
-    margin: 0 auto;
-    width: 1280px;
-    position: relative;
-}
-#slides {
-    box-shadow: 2px 2px 4px #333, inset 1px 1px 0 #ddd;
-    padding: 5px;
-    background: #fff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-.inner {width: 1000%}
-.inner:after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-}
-.page {
-    float: left;
-    width: 10%;
-}
-.page img {
-    width: 1200px;
-}
-#overflow {overflow: hidden;}
-#slider input {display: none;}
-#controls {
-    position: absolute;
-    width: 100%;
-    top: 120px;
-    left: 0;
-    height: 50px;
-}
-#controls label {
-    display: none;
-    opacity: 0.3;
-    cursor: pointer;
-}
-controls label:hover{ opacity: 0.8;}
-#slide1:checked ~ #controls label:nth-child(2) ,
-#slide2:checked ~ #controls label:nth-child(3) ,
-#slide3:checked ~ #controls label:nth-child(4) ,
-#slide4:checked ~ #controls label:nth-child(5) ,
-#slide5:checked ~ #controls label:nth-child(6) ,
-#slide6:checked ~ #controls label:nth-child(7) ,
-#slide7:checked ~ #controls label:nth-child(8) ,
-#slide8:checked ~ #controls label:nth-child(9) ,
-#slide9:checked ~ #controls label:nth-child(10) ,
-#slide10:checked ~ #controls label:nth-child(1) {
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-left: 20px solid #333;
-    border-bottom: 20px solid transparent;
-    float: right;
-    margin-right: -30px;
-    display: block;
-}
 
-#slide1:checked ~ #controls label:nth-child(10) ,
-#slide2:checked ~ #controls label:nth-child(1) ,
-#slide3:checked ~ #controls label:nth-child(2) ,
-#slide4:checked ~ #controls label:nth-child(3) ,
-#slide5:checked ~ #controls label:nth-child(4) ,
-#slide6:checked ~ #controls label:nth-child(5) ,
-#slide7:checked ~ #controls label:nth-child(6) ,
-#slide8:checked ~ #controls label:nth-child(7) ,
-#slide9:checked ~ #controls label:nth-child(8) ,
-#slide10:checked ~ #controls label:nth-child(9) {
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-left: 20px solid #333;
-    border-bottom: 20px solid transparent;
-    float: left;
-    margin-right: -27px;
-    display: block;
-}
-#slides .inner {
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-}
 
 /*services*/
 table {
@@ -230,17 +140,17 @@ p {
     margin-right: 300px;
 }
 @media (max-width:768px) {
-    p {
+  p {
         margin-left: 3px;
         margin-right: 3px;
     }
-    #background {
-        margin-top: 75px;
-        left: 0;
-        right: 0;
-    }
-    #works img {width: 350px;}
+#background {
+    margin-top: 75px;
+    width: 360px;
 }
+}
+
+
        
     
 
@@ -262,3 +172,6 @@ color: #d1633c;
 
 
 
+
+
+#work

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
     <title>HM studio</title>
     <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="" type="index.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             var touch = $('#touch-menu');
@@ -24,11 +23,17 @@
             });
         });
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 </head>
 <body>
     <header class="container clearfix">
         <div class="logo">
-            <img src="logo.jpg" width="60px" height="70"></img>
+            <img src="logo.jpg" alt="" width="65px" height="70">
         </div>
         <a href="#" id="touch-menu">Меню</a>
         <nav>
@@ -40,7 +45,7 @@
             </ul>
         </nav>
     </header>
-    <img id="background" src="background1.jpg" alt="HM studio" width="1280px"></img>
+    <img id="background" src="background1.jpg" alt="HM studio" style="max-width:1280px;position:relative">
     <hr>
     <p><br></p>
     <section id="us">
@@ -94,79 +99,43 @@
                 <li>Дизайнерські вироби під замовлення</li>
             </ul>
         </article>
+    </section>
         <p><br></p>
         <hr>
         <p><br></p>
-    <div id="slider">
-        <input type="radio" name="slider" id="slide1" checked="">
-        <input type="radio" name="slider" id="slide2">
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
-        <input type="radio" name="slider" id="slide5">
-        <input type="radio" name="slider" id="slide6">
-        <input type="radio" name="slider" id="slide7">
-        <input type="radio" name="slider" id="slide8">
-        <input type="radio" name="slider" id="slide9">
-        <input type="radio" name="slider" id="slide10">
-        <div id="slides">
-            <div id="overflow">
-                <div class="page">
-                    <img src="1.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="2.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="3.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="4.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="5.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="6.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="7.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="8.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="9.jpg"></img>
-                </div>
-                <div class="page">
-                    <img src="10.jpg"></img>
-                </div>
-            </div> 
-        </div>
+    <h2 class="w3-center">Наші роботи</h2>
+    <p><br></p>
+    <div id="work" style="max-width:1280px;position:relative">
+        <img class="mySlides" src="1.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="2.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="3.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="4.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="5.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="6.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="7.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="8.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="9.jpg" alt="" style="width:100%">
+        <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+        <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
     </div>
-    <div id="controls">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
-        <label for="slide5"></label>
-        <label for="slide6"></label>
-        <label for="slide7"></label>
-        <label for="slide8"></label>
-        <label for="slide9"></label>
-        <label for="slide10"></label>
-    </div>
-    <div id="active">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
-        <label for="slide5"></label>
-        <label for="slide6"></label>
-        <label for="slide7"></label>
-        <label for="slide8"></label>
-        <label for="slide9"></label>
-        <label for="slide10"></label>
-    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+}
+    </script>
+
         <p><br></p>
         <hr>
         <p><br></p>
@@ -417,8 +386,8 @@
         </table>
     </section>
     <hr>
+    <p><br></p>
     <h3>Наші контакти:</h3>
-    <a href="http://hm-studio.com.ua" alt="hm-studio.com.ua">HM studio</a>
     <p>тел.: +38(099)36 55 722</p>
     <p>e-mail: hmstudio35@gmail.com</p>
     <p>А також шукайте нас у соцмережах</p>
@@ -438,5 +407,8 @@
     <input type="submit" value="Надіслати повідомлення" class="button">
   </form>
 </div>
+<p><br></p>
+<script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
