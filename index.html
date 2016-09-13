@@ -29,6 +29,24 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+   
+   
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $('a[href^="#"]').click(function () {
+                elementClick = $(this).attr("href");
+                destination = $(elementClick).offset().top;
+                if($.browser.safari){
+                    $('body').animate( { scrollTop: destination }, 1000);
+                } else {
+                    $('html').animate( { scrollTop: destination }, 1000);
+                }
+                return false;
+                });
+        });
+    </script>
+
+
 </head>
 <body>
     <header class="container clearfix">
@@ -42,13 +60,32 @@
                 <li><a href="#do">Послуги</a></li>
                 <li><a href="#work">Роботи</a></li>
                 <li><a href="#price">Прайс</a></li>
+                <li><a href="#nom">Контакти</a></li>
             </ul>
         </nav>
     </header>
-    <img id="background" src="background1.jpg" alt="HM studio" style="max-width:1280px;position:relative">
-    <hr>
-    <p><br></p>
+    <div>
+    <img id="background" src="www.png" alt="HM studio" style="width:100%;position:relative">
+    <div class="bla">
+        <h2>Давно мріяли про стильний дизайн 
+        для своєї оселі? Тоді Ви зайшли 
+        на правильну сторінку.</h2>
+        <p>Саме в нас, Ви зможете знайти 
+        ідеальне рішення, як зробити 
+        свою домівку стильною, 
+        комфортною і саме такою, яка 
+        буде радувати Ваше око кожного 
+        дня. І навіть більше того. 
+        Ми допоможемо втілити Вашу 
+        мрію в реальність і зробити її 
+        чимось більшим, ніж просто мрією!</p>
+        <p><a href="#nom">
+            <h3><b>Зв'яжіться з нами просто зараз.</b></h3>
+        </a></p>
+    </div>
+    </div>
     <section id="us">
+        <h2>Про нас</h2>
         <p>У зв'язку з різноманітністю направленості дизайну не вважається можливим 
         створення єдиної науки, яка б вивчала дизайн в цілому. Як наслідок важко 
         створити інститут дизайну загалом та міцні зв'язки між дизайнерами різних 
@@ -65,8 +102,8 @@
         <br><u>Основним завданням дизайну є:</u></p>
         <ul>
             <li><em>Ергономіка</em> — легкість у використанні об'єкта дизайну;</li>
-            <li><em>Інтерфейс користувача</em> — психологічні особливості оператора, <br>що працює з об'єктом дизайну;</li>
-            <li><em>Останні тенденції</em> — застосування нових технологій в дизайні <br>для спрощення його інших завдань.</li>
+            <li><em>Інтерфейс користувача</em> — психологічні особливості оператора, що працює з об'єктом дизайну;</li>
+            <li><em>Останні тенденції</em> — застосування нових технологій в дизайні для спрощення його інших завдань.</li>
         </ul>
         <p>Отже, <u>об'єкт дизайну</u> — річ, що модифікується завдяки дизайну 
         у напрямку вирішення проблем проектування або соціальної привабливості. 
@@ -85,18 +122,18 @@
         <article>
             <h2>Послуги</h2>
             <ul>
-                <li>Дизайн консультація</li>
-                <li>Перепланування квартир</li>
-                <li>Створення дизайн-проектів</li>
-                <li>Авторський та технічний нагляд за будівництвом</li>
-                <li>Комплексні ремонтні роботи</li>
-                <li>Оздоблювальні роботи</li>
-                <li>Сантехнічні роботи</li>
-                <li>Теплі підлоги</li>
-                <li>Електромонтажні роботи</li>
-                <li>Монтаж вікон та дверей</li>
-                <li>Ремонт Вашої оселі згідно Ваших побажань</li>
-                <li>Дизайнерські вироби під замовлення</li>
+                <li><img src="drawing-architecture-project-of-a-house.png">Дизайн консультація</li>
+                <li><img src="flat-plan.png">Перепланування квартир</li>
+                <li><img src="armchair.png">Створення дизайн-проектів</li>
+                <li><img src="cap-outline-hand-drawn-construction-tool.png">Авторський та технічний нагляд за будівництвом</li>
+                <li><img src="wrench-and-hammer-cross.png">Комплексні ремонтні роботи</li>
+                <li><img src="brush-with-fresh-painting.png">Оздоблювальні роботи</li>
+                <li><img src="plumber.png">Сантехнічні роботи</li>
+                <li><img src="builder.png">Теплі підлоги</li>
+                <li><img src="chandelier.png">Електромонтажні роботи</li>
+                <li><img src="opened-exit-door.png">Монтаж вікон та дверей</li>
+                <li><img src="worker.png">Ремонт Вашої оселі згідно Ваших побажань</li>
+                <li><img src="hammer-silhouette.png">Дизайнерські вироби під замовлення</li>
             </ul>
         </article>
     </section>
@@ -105,7 +142,7 @@
         <p><br></p>
     <h2 class="w3-center">Наші роботи</h2>
     <p><br></p>
-    <div id="work" style="max-width:1280px;position:relative">
+    <div id="work" style="width:100%;position:relative">
         <img class="mySlides" src="1.jpg" alt="" style="width:100%">
         <img class="mySlides" src="2.jpg" alt="" style="width:100%">
         <img class="mySlides" src="3.jpg" alt="" style="width:100%">
@@ -115,8 +152,8 @@
         <img class="mySlides" src="7.jpg" alt="" style="width:100%">
         <img class="mySlides" src="8.jpg" alt="" style="width:100%">
         <img class="mySlides" src="9.jpg" alt="" style="width:100%">
-        <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
-        <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+        <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><img src="ss1.png"></a>
+        <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)"><img src="ss2.png"></a>
     </div>
     <script>
         var slideIndex = 1;
@@ -151,7 +188,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td>Підлога</td>
+                <td><b>Підлога</b></td>
                 <td>о/в</td>
                 <td>Вартість</td>
             </tr>
@@ -193,7 +230,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td>Стеля</td>
+                <td><b>Стеля</b></td>
                 <td></td>
                 <td></td>
             </tr>
@@ -253,7 +290,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td>Стіни</td>
+                <td><b>Стіни</b></td>
                 <td></td>
                 <td></td>
             </tr>
@@ -319,7 +356,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td>Прорізи</td>
+                <td><b>Прорізи</b></td>
                 <td></td>
                 <td></td>
             </tr>
@@ -349,7 +386,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td>Електротехнічні роботи</td>
+                <td><b>Електротехнічні роботи</b></td>
                 <td></td>
                 <td></td>
             </tr>
@@ -387,10 +424,14 @@
     </section>
     <hr>
     <p><br></p>
+    <div id="nom">
     <h3>Наші контакти:</h3>
     <p>тел.: +38(099)36 55 722</p>
     <p>e-mail: hmstudio35@gmail.com</p>
-    <p>А також шукайте нас у соцмережах</p>
+    <p>А також шукайте нас у соцмережах:</p>
+    <a href="https://www.facebook.com/groups/555579447957618/?fref=ts"><img src="facebook-square-social-logo.png"></a>
+    <a href="https://vk.com/hmstudio1"><img src="vk.png"></a>
+    </div>
     <div id="contact">
   <h1 class="pageTitle">Напишіть нам і ми обов'язково з вами зв'яжемось!</h1>
   <div class="contactContent">
@@ -404,11 +445,16 @@
     <input type="email" id="email" name="_replyto" class="full-width"><br>
     <label for="message">Повідомлення</label>
     <textarea name="message" id="message" cols="30" rows="10" class="full-width"></textarea><br>
-    <input type="submit" value="Надіслати повідомлення" class="button">
+    <input type="submit" value="  Надіслати повідомлення  " class="button">
   </form>
 </div>
 <p><br></p>
-<script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<div class="up">
+    <a href="#background">
+        <img src="upload(1).png">
+    </a>
+</div>
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" integrity="sha256-iBcUE/x23aI6syuqF7EeT/+JFBxjPs5zeFJEXxumwb0=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
